@@ -1,4 +1,3 @@
-
 .container {
   margin: 10px 0;
   align-self: center;
@@ -19,6 +18,6 @@
   border-radius: 4px;
   padding: 10px;
   color: cornflowerblue;
-  background-color:antiquewhite;
+  background-color: antiquewhite;
   font-style: italic;
-  }
+}

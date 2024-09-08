@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { nanoid } from "nanoid";
 import { useId } from "react";
 import * as Yup from "yup";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
 import { useDispatch } from "react-redux";
 
 const ContactsSchema = Yup.object().shape({
@@ -12,10 +12,6 @@ const ContactsSchema = Yup.object().shape({
     .max(50, "Too Long!")
     .required("Required"),
   number: Yup.string()
-    .matches(
-      /^\d{3}-\d{2}-\d{2}$/,
-      "Invalid phone number! Enter the number in the format 000-00-00"
-    )
     .min(6, "Too Short!")
     .max(18, "Too Long!")
     .required("Required"),
@@ -51,7 +47,7 @@ const ContactForm = () => {
         validationSchema={ContactsSchema}
       >
         <Form className={css.form}>
-          <div className={css.formGroup}>
+          <div className={css.wrapper}>
             <label htmlFor="name" className={css.label}>
               Name
             </label>

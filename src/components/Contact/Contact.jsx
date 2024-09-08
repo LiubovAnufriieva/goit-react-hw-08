@@ -1,27 +1,40 @@
 import css from "./Contact.module.css";
-import { FaUser } from "react-icons/fa6";
-import { FaPhone } from "react-icons/fa";
-import { deleteContact } from "../../redux/contactsOps"  
+import { FaUser, FaPhone } from "react-icons/fa6";
+import { GrEdit } from "react-icons/gr";
+import { AiOutlineDelete } from "react-icons/ai";
 import { useDispatch } from "react-redux";
+import { openModal } from '../../redux/modal/slice';
 
-const Contact = ({id, name, number}) => {
-  const dispatch = useDispatch();
-  // const handleDelete = () => dispatch(deleteContact(id));
+
+const Contact = (contact, onEdit) => {
+  const dispatch = useDispatch(contact.id);
+  const handleOpenModal = () => dispatch(openModal(contact.id));
+
+  const handleEdit = () => {
+    onEdit(contact);
+  }
 
   return (
     <div className={css.container}>
       <div className={css.text}>
         <p>
-          <FaUser className={css.contactIcon} /> {name}
+          <FaUser className={css.contactIcon} />&nbsp;  {contact.name}
         </p>
 
         <p>
-          <FaPhone className={css.contactIcon} /> {number}
+          <FaPhone className={css.contactIcon} /> &nbsp; {contact.number}
         </p>
       </div>
-      <button className={css.btn} onClick={() => dispatch(deleteContact(id))}>
+      <button 
+      className={css.deleteBtn} 
+      onClick={handleOpenModal}
+      type="button">
         Delete
+        <AiOutlineDelete />
       </button>
+      <button className={css.editButton} type="button" onClick={handleEdit}>
+          <GrEdit />
+        </button>
     </div>
   );
 };

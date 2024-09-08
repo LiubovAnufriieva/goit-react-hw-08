@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .username {
+    font-weight: 700;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .username {
+      color: #ffbf47;
+    }
+  }
+  
+  .logoutBtn {
+    max-width: 130px;
+  }
