@@ -12,16 +12,10 @@ import { selectIsRefreshing } from "../redux/auth/selectors";
 import css from "./App.module.css";
 
 const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
-const RegistrationPage = lazy(() =>
-  import("../pages/RegistrationPage/RegistrationPage")
-);
+const RegistrationPage = lazy(() => import("../pages/RegistrationPage/RegistrationPage"));
 const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
-const ContactsPage = lazy(() =>
-  import("../pages/ContactsPage/ContactsPage")
-);
-const NotFoundPage = lazy(() =>
-  import("../pages/NotFoundPage/NotFoundPage")
-);
+const ContactsPage = lazy(() => import("../pages/ContactsPage/ContactsPage"));
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
 
 function App() {
   const isRefreshing = useSelector(selectIsRefreshing);

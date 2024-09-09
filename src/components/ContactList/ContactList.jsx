@@ -8,9 +8,9 @@ const ContactList = ({ onEdit }) => {
 
   return (
     <ul className={css.item}>
-      {visibleContacts.map((item) => (
-        <li className={css.item} key={item.id}>
-          <Contact name={item.name} number={item.number} id={item.id} onEdit={onEdit} />
+      {visibleContacts.map((contact) => (
+        <li className={css.item} key={contact.id}>
+          <Contact contact={contact} onEdit={onEdit} />
         </li>
       ))}
     </ul>

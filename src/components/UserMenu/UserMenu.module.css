@@ -7,14 +7,19 @@
   
   .username {
     font-weight: 700;
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .username {
-      color: #ffbf47;
-    }
+    color: cornflowerblue;
   }
   
   .logoutBtn {
     max-width: 130px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: cornflowerblue;
+    padding: 2px;
+    color: antiquewhite;
+    font-size: 12px;
   }
+
+  .logoutBtn:hover {
+    transform: scale(1.1);
+  } 

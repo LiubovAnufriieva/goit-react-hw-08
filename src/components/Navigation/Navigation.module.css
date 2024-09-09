@@ -3,7 +3,8 @@
   text-decoration: none;
   padding: 10px;
   font-weight: 700;
-  color: inherit;
+  color: cornflowerblue;
+
 }
 
 .nav {
@@ -12,8 +13,4 @@
   flex-wrap: wrap;
 }
 
-@media (prefers-color-scheme: dark) {
-  .link {
-    color: #ffff;
-  }
-}
+

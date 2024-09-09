@@ -8,6 +8,7 @@
     background-color:antiquewhite;
     border: 1px solid cornflowerblue;
     border-radius: 6px;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
   }
   
   .text {
@@ -21,11 +22,15 @@
     color: cornflowerblue;
   }
 
-  .contactIcon {
-   margin-right: 10px;
+  .icon {
+   /* margin-right: 10px; */
    color: cornflowerblue;
   }
-  
+  .btn_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
   .btn {
     border: 2px solid transparent;
     border-radius: 6px;
@@ -33,4 +38,11 @@
     color:antiquewhite;
     font-weight: 500;
     padding: 5px;
+  }
+
+  .deleteBtn,
+  .editBtn {
+    border: 1px solid cornflowerblue;
+    border-radius: 6px;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.3);
   }

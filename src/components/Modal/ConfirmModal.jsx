@@ -65,8 +65,10 @@ const ConfirmModal = () => {
     onRequestClose={handleClose}
     style={customStyles}
     contentLabel="Confirm Modal"
+    className={css.modal}
     >
-      <p>Do you really want to delete this contact?</p>
+      <p className={css.title}>
+        Do you really want to delete this contact?</p>
       <div className={css.btn_container}>
         <button className={css.yes_btn} onClick={handleConfirm}>
           Yes
