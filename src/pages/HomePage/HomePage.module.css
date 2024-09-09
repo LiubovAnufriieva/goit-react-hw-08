@@ -6,6 +6,7 @@
   min-height: calc(100vh - 300px);
   align-items: center;
   justify-content: center;
+  gap: 50px;
 }
 
 .title {
@@ -17,4 +18,5 @@
 
 .icon {
   color: cornflowerblue;
+  padding: 0;
 }

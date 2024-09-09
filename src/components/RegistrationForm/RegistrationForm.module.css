@@ -2,12 +2,21 @@
     width: 320px;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    border: 1px solid cornflowerblue;
+    border-radius: 8px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+   
+    gap: 10px;
+    margin: 20px;
+    color: cornflowerblue;
   }
   
   .error {
@@ -16,17 +25,52 @@
   }
   
   .input {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 8px;
+    border: 1px solid cornflowerblue;
     padding: 5px 5px 5px 10px;
   }
   
   .btnRegister {
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
   }
   
   .btn {
-    width: 150px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: cornflowerblue;
+    padding: 10px;
+    color: antiquewhite;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+  } 
+
+
+  
+  
+  .field {
+   
+  }
+  
+  .error {
+    color: red;
+    font-weight: 500;
+  }
+  
+  .btn {
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+   
     border: 2px solid transparent;
     border-radius: 8px;
     background-color: cornflowerblue;
